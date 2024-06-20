@@ -9,8 +9,10 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Image src={tweet.user.image} style={styles.userImage} />
-      <Text>{tweet.user.name}</Text>
-      <Text>{tweet.content}</Text>
+      <View style={styles.mainContainer}>
+        <Text>{tweet.user.name}</Text>
+        <Text>{tweet.content}</Text>
+      </View>
     </View>
   );
 }
@@ -22,5 +24,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
   },
-  userImage: {},
+  userImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+  },
+  mainContainer: {},
 });
