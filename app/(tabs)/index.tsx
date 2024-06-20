@@ -8,8 +8,9 @@ const tweet = tweets[1];
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text>{tweet.content}</Text>
       <Image src={tweet.user.image} style={styles.userImage} />
+      <Text>{tweet.user.name}</Text>
+      <Text>{tweet.content}</Text>
     </View>
   );
 }
@@ -19,6 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row',
   },
   userImage: {},
 });
