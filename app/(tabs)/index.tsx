@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 import { Text, View } from '@/components/Themed';
 import tweets from '@/assets/data/tweets';
@@ -8,7 +8,8 @@ const tweet = tweets[0];
 export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text></Text>
+      <Text>{tweet.content}</Text>
+      <Image src={tweet.user.image} />
     </View>
   );
 }
