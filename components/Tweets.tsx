@@ -9,10 +9,10 @@ const Tweet = ({ tweet }: TweetProps) => {
     <View style={styles.container}>
       <Image src={tweet.user.image} style={styles.userImage} />
       <View style={styles.mainContainer}>
-        <Text style={styles.name}>{tweet.user.name}</Text>
-        <Text style={styles.name}>{tweet.user.username}</Text>
-        <Text style={styles.content}>{tweet.content}</Text>
-
+        <View style={{ flexDirection: 'row' }}>
+          <Text style={styles.name}>{tweet.user.name}</Text>
+          <Text style={styles.username}>{tweet.user.username}・2h</Text>
+        </View>
         {tweet.image && <Image src={tweet.image} style={styles.image} />}
       </View>
     </View>
@@ -38,6 +38,10 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: '600',
+  },
+  username: {
+    color: 'gray',
+    marginLeft: 5,
   },
   content: {
     lineHeight: 20,
