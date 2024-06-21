@@ -1,4 +1,5 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
+import { TweetType } from '@/type';
 
 type TweetProps = {
   tweet: TweetType;
