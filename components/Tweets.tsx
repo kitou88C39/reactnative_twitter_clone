@@ -1,3 +1,5 @@
+import { Text, View } from '@/Themed';
+
 const Tweet = () => {
   return (
     <View style={styles.container}>
