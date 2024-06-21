@@ -21,10 +21,17 @@ const Tweet = ({ tweet }: TweetProps) => {
           />
         </View>
         {tweet.image && <Image src={tweet.image} style={styles.image} />}
+
         <View style={styles.footer}>
           <View>
             <EvilIcons name='comment' size={220} color='gray' />
-            <Text style={{ fontSize: 12 }}>123</Text>
+            <Text style={{ fontSize: 12, color: 'gray' }}>123</Text>
+          </View>
+        </View>
+        <View style={styles.footer}>
+          <View>
+            <EvilIcons name='comment' size={220} color='gray' />
+            <Text style={{ fontSize: 12, color: 'gray' }}>123</Text>
           </View>
         </View>
       </View>
@@ -63,11 +70,12 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     aspectRatio: 16 / 9,
-    marginTop: 10,
+    marginVertical: 10,
     borderRadius: 15,
   },
   footer: {
     flexDirection: 'row',
+    marginVertical: 5,
   },
 });
 
