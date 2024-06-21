@@ -1,6 +1,6 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
 import { TweetType } from '@/type';
-import { Entypo } from '@expo/vector-icons';
+import { Entypo, EvilIcons } from '@expo/vector-icons';
 
 type TweetProps = {
   tweet: TweetType;
@@ -17,11 +17,16 @@ const Tweet = ({ tweet }: TweetProps) => {
             name='dots-three-horizontal'
             size={16}
             color='black'
-            style={{ marginLeft: 'auto' }}
+            style={{ marginLeft: 'auto', alignItems: 'center' }}
           />
         </View>
         {tweet.image && <Image src={tweet.image} style={styles.image} />}
-        <View style={styles.footer}></View>
+        <View style={styles.footer}>
+          <View>
+            <EvilIcons name='comment' size={220} color='gray' />
+            <Text style={{ fontSize: 12 }}>123</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
