@@ -1,11 +1,11 @@
-type User = {
+export type User = {
   id: string;
   name: string;
   username: string;
   image: string;
 };
 
-type TweetType = {
+export type TweetType = {
   content: string;
   user: User;
 };
