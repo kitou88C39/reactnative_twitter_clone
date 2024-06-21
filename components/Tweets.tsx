@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: 'lightgrey',
+    backgroundColor: 'white',
   },
   userImage: {
     width: 50,
