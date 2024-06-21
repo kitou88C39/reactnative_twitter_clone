@@ -2,6 +2,17 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 import { TweetType } from '@/type';
 import { Entypo, EvilIcons } from '@expo/vector-icons';
 
+const IconButton = () => {
+  return (
+    <View style={styles.footer}>
+      <View>
+        <EvilIcons name='comment' size={220} color='gray' />
+        <Text style={{ fontSize: 12, color: 'gray' }}>123</Text>
+      </View>
+    </View>
+  );
+};
+
 type TweetProps = {
   tweet: TweetType;
 };
@@ -22,18 +33,12 @@ const Tweet = ({ tweet }: TweetProps) => {
         </View>
         {tweet.image && <Image src={tweet.image} style={styles.image} />}
 
-        <View style={styles.footer}>
+        {/* <View style={styles.footer}>
           <View>
             <EvilIcons name='comment' size={220} color='gray' />
             <Text style={{ fontSize: 12, color: 'gray' }}>123</Text>
           </View>
-        </View>
-        <View style={styles.footer}>
-          <View>
-            <EvilIcons name='comment' size={220} color='gray' />
-            <Text style={{ fontSize: 12, color: 'gray' }}>123</Text>
-          </View>
-        </View>
+        </View> */}
       </View>
     </View>
   );
