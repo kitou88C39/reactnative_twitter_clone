@@ -10,8 +10,10 @@ const Tweet = ({ tweet }: TweetProps) => {
       <Image src={tweet.user.image} style={styles.userImage} />
       <View style={styles.mainContainer}>
         <Text style={styles.name}>{tweet.user.name}</Text>
+        <Text style={styles.name}>{tweet.user.username}</Text>
         <Text style={styles.content}>{tweet.content}</Text>
-        <Image src={tweet.image} style={styles.image} />
+
+        {tweet.image && <Image src={tweet.image} style={styles.image} />}
       </View>
     </View>
   );
