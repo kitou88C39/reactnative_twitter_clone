@@ -2,18 +2,17 @@ import { StyleSheet, Image } from 'react-native';
 
 import { Text, View } from '@/components/Themed';
 import tweets from '@/assets/data/tweets';
-
 const tweet = tweets[0];
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Image src={tweet.user.image} style={styles.userImage} />
-      <View style={styles.mainContainer}>
-        <Text style={styles.name}>{tweet.user.name}</Text>
-        <Text style={styles.content}>{tweet.content}</Text>
-      </View>
-    </View>
+    // <View style={styles.container}>
+    //   <Image src={tweet.user.image} style={styles.userImage} />
+    //   <View style={styles.mainContainer}>
+    //     <Text style={styles.name}>{tweet.user.name}</Text>
+    //     <Text style={styles.content}>{tweet.content}</Text>
+    //   </View>
+    // </View>
   );
 }
 
