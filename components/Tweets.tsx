@@ -4,10 +4,10 @@ import { Entypo, EvilIcons } from '@expo/vector-icons';
 
 type IconButtonProps = {
   icon: string;
-  text: string;
+  text?: string;
 };
 
-const IconButton = ({ icon, text }) => {
+const IconButton = ({ icon, text }: IconButtonProps) => {
   return (
     <View style={styles.footer}>
       <View>
@@ -39,11 +39,11 @@ const Tweet = ({ tweet }: TweetProps) => {
         {tweet.image && <Image src={tweet.image} style={styles.image} />}
 
         <View style={styles.footer}>
-          <IconButton />
-          <IconButton />
-          <IconButton />
-          <IconButton />
-          <IconButton />
+          <IconButton icon='comment' text={tweet.numberOfComments} />
+          <IconButton icon='comment' text={tweet.numberOfComments} />
+          <IconButton icon='comment' text={tweet.numberOfComments} />
+          <IconButton icon='comment' text={tweet.numberOfComments} />
+          <IconButton icon='comment' text={tweet.numberOfComments} />
         </View>
       </View>
     </View>
