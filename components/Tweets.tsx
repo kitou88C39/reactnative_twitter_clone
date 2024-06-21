@@ -3,8 +3,8 @@ import { TweetType } from '@/type';
 import { Entypo, EvilIcons } from '@expo/vector-icons';
 
 type IconButtonProps = {
-  icon: string;
-  text?: string;
+  icon: React.ComponentProps<typeof EvilIcons>;
+  text?: string | number;
 };
 
 const IconButton = ({ icon, text }: IconButtonProps) => {
@@ -40,10 +40,10 @@ const Tweet = ({ tweet }: TweetProps) => {
 
         <View style={styles.footer}>
           <IconButton icon='comment' text={tweet.numberOfComments} />
-          <IconButton icon='comment' text={tweet.numberOfComments} />
-          <IconButton icon='comment' text={tweet.numberOfComments} />
-          <IconButton icon='comment' text={tweet.numberOfComments} />
-          <IconButton icon='comment' text={tweet.numberOfComments} />
+          <IconButton icon='retweet' text={tweet.numberOfRetweets} />
+          <IconButton icon='heart' text={tweet.numberOfLikes} />
+          <IconButton icon='chart' text={tweet.impressions} />
+          <IconButton icon='share-apple' />
         </View>
       </View>
     </View>
