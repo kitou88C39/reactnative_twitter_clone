@@ -1,4 +1,6 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
+import tweets from '@/assets/data/tweets';
+const tweet = tweets[0];
 
 const Tweet = () => {
   return (
@@ -36,3 +38,5 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 });
+
+export default Tweet;
