@@ -1,5 +1,6 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
 import { TweetType } from '@/type';
+import {Entypo} from `@expo/vector-icons`;
 
 type TweetProps = {
   tweet: TweetType;
@@ -12,6 +13,7 @@ const Tweet = ({ tweet }: TweetProps) => {
         <View style={{ flexDirection: 'row' }}>
           <Text style={styles.name}>{tweet.user.name}</Text>
           <Text style={styles.username}>{tweet.user.username}・2h</Text>
+          <Entypo name="dots-three-horizontal" size={16} color="black" style={{marginLeft:'auto'}}/>
         </View>
         {tweet.image && <Image src={tweet.image} style={styles.image} />}
       </View>
