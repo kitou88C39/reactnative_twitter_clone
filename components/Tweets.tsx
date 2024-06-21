@@ -1,7 +1,15 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
 
+type User = {
+  id: string;
+  name: string;
+  username: string;
+  image: string;
+};
+
 type TweetType = {
   content: string;
+  user: User;
 };
 type TweetProps = {
   tweet: TweetType;
