@@ -1,7 +1,5 @@
-import React from 'react';
+import Tweet from '@/components/Tweet';
 
-const Tweet = () => {
-  return <div>Tweet</div>;
+export default Tweet = () => {
+  return <Tweet />;
 };
-
-export default Tweet;
