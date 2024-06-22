@@ -1,5 +1,6 @@
 import Tweet from '@/components/Tweet';
+import tweets from '@/assets/data/tweets';
 
-export default Tweet = () => {
-  return <Tweet />;
-};
+export default function TweetScreen() {
+  return <Tweet tweet={tweets[0]} />;
+}
