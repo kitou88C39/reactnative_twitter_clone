@@ -2,14 +2,19 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 import { TweetType } from '@/type';
 import { Entypo } from '@expo/vector-icons';
 import IconButton from './IconButton';
+import { Link } from 'expo-router';
 
 type TweetProps = {
   tweet: TweetType;
 };
+
 const Tweet = ({ tweet }: TweetProps) => {
   return (
     <View style={styles.container}>
+      <Link href={'/Tweet'}>Open</Link>
+
       <Image src={tweet.user.image} style={styles.userImage} />
+
       <View style={styles.mainContainer}>
         <View style={{ flexDirection: 'row' }}>
           <Text style={styles.name}>{tweet.user.name}</Text>
