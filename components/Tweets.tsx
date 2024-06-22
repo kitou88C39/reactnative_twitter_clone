@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
 import { TweetType } from '@/type';
-import { Entypo, EvilIcons } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import IconButton from './IconButton';
 
 type TweetProps = {
   tweet: TweetType;
