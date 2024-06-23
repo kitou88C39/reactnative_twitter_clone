@@ -1,5 +1,5 @@
 import { StyleSheet, View, FlatList } from 'react-native';
-import Tweet from '@/components/Tweets';
+import Tweet from '@/components/Tweet';
 import tweets from '@/assets/data/tweets';
 
 export default function TabOneScreen() {
