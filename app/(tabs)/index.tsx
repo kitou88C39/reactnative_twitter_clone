@@ -11,7 +11,7 @@ export default function TabOneScreen() {
         renderItem={({ item }) => <Tweet tweet={item} />}
       />
       <Pressable style={styles.floatingButton}>
-        <Entypo name='plus' size={24} color='blacl' />
+        <Entypo name='plus' size={24} color='white' />
       </Pressable>
     </View>
   );
@@ -23,12 +23,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   floatingButton: {
-    // ここに floatingButton のスタイルを定義します
-    position: 'absolute',
-    bottom: 20,
-    right: 20,
     backgroundColor: 'blue',
+    width: 50,
+    height: 50,
     borderRadius: 50,
-    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    right: 15,
+    bottom: 15,
   },
 });
