@@ -30,12 +30,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   floatingButton: {
-    backgroundColor: 'blue',
-    width: 50,
-    height: 50,
-    borderRadius: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#1C9BF0',
+
+    borderRadius: 25,
+    padding: 15,
+
     position: 'absolute',
     right: 15,
     bottom: 15,
