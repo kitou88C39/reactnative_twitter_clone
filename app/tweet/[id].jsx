@@ -4,9 +4,10 @@ import tweets from '@/assets/data/tweets';
 import { useSearchParams } from 'expo-router';
 
 export default function TweetScreen() {
-  const { id } = useSearchParams();
+  const { id, tweet: tweetString } = useSearchParams();
+  const tweet = JSON.parse(tweetString);
 
-  const tweet = tweets.find((t) => t.id === id);
+  //const tweet = tweets.find((t) => t.id === id);
 
   if (!tweet) {
     return <Text>Tweet{id} not found!</Text>;
