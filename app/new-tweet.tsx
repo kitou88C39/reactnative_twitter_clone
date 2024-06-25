@@ -1,5 +1,12 @@
 import { Link } from 'expo-router';
-import { View, StyleSheet, Text, Image, TextInput } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Image,
+  TextInput,
+  Pressable,
+} from 'react-native';
 
 const user = {
   id: 'u1',
@@ -10,11 +17,17 @@ const user = {
 };
 
 export default function NewTweet() {
+  const onTweetPress = () => {
+    console.warn('Posting the tweet');
+  };
   return (
     <View style={styles.container}>
-      <Link href='../' style={{ fontSize: 24 }}>
-        Cancel
-      </Link>
+      <View style={styles.buttonContainer}>
+        <Link href='../' style={{ fontSize: 18 }}>
+          Cancel
+        </Link>
+        <Pressable onPress={onTweetPress}>Tweet</Pressable>
+      </View>
       <View style={styles.inputContainer}>
         <Image src={user.image} style={styles.image} />
         <TextInput
