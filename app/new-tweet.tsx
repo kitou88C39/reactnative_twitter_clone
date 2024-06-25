@@ -7,6 +7,7 @@ import {
   Image,
   TextInput,
   Pressable,
+  SafeAreaView,
 } from 'react-native';
 
 const user = {
@@ -23,27 +24,29 @@ export default function NewTweet() {
     console.warn('Posting the tweet:', text);
   };
   return (
-    <View style={styles.container}>
-      <View style={styles.buttonContainer}>
-        <Link href='../' style={{ fontSize: 18 }}>
-          Cancel
-        </Link>
-        <Pressable onPress={onTweetPress} style={styles.button}>
-          <Text style={styles.buttonText}>Tweet</Text>
-        </Pressable>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <View style={styles.buttonContainer}>
+          <Link href='../' style={{ fontSize: 18 }}>
+            Cancel
+          </Link>
+          <Pressable onPress={onTweetPress} style={styles.button}>
+            <Text style={styles.buttonText}>Tweet</Text>
+          </Pressable>
+        </View>
+        <View style={styles.inputContainer}>
+          <Image src={user.image} style={styles.image} />
+          <TextInput
+            value={text}
+            onChangeText={setText}
+            placeholder="What's happening?"
+            multiline
+            numberOfLines={5}
+            style={{ flex: 1 }}
+          />
+        </View>
       </View>
-      <View style={styles.inputContainer}>
-        <Image src={user.image} style={styles.image} />
-        <TextInput
-          value={text}
-          onChangeText={setText}
-          placeholder="What's happening?"
-          multiline
-          numberOfLines={5}
-          style={{ flex: 1 }}
-        />
-      </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
