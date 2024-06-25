@@ -1,9 +1,8 @@
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
 
-const twitter-blue = () => {
-  return (
-    <div>twitter-blue</div>
-  )
-}
+const TwitterBlue = () => {
+  return <div>TtwitteBblue</div>;
+};
 
-export default twitter-blue
+export default TwitterBlue;
