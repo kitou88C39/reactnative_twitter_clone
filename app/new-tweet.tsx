@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigation } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import {
   View,
   StyleSheet,
@@ -20,11 +20,12 @@ const user = {
 
 export default function NewTweet() {
   const [text, setText] = useState('');
-  const navigation = useNavigation();
+  const router = useRouter();
 
   const onTweetPress = () => {
     console.warn('Posting the tweet:', text);
     setText('');
+    router.back();
   };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
