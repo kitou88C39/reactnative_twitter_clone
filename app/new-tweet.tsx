@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text, Image, TextInput } from 'react-native';
 
 const user = {
   id: 'u1',
@@ -10,9 +10,11 @@ const user = {
 
 export default function NewTweet() {
   return (
-    <View>
-      <Image src={user.image} style={styles.image} />
-      <Text>Create new tweet</Text>
+    <View style={styles.container}>
+      <View style={styles.inputContainer}>
+        <Image src={user.image} style={styles.image} />
+        <Text>Create new tweet</Text>
+      </View>
     </View>
   );
 }
