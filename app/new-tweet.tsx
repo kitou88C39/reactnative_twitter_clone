@@ -26,7 +26,9 @@ export default function NewTweet() {
         <Link href='../' style={{ fontSize: 18 }}>
           Cancel
         </Link>
-        <Pressable onPress={onTweetPress}>Tweet</Pressable>
+        <Pressable onPress={onTweetPress} style={styles.button}>
+          <Text style={styles.buttonText}>Tweet</Text>
+        </Pressable>
       </View>
       <View style={styles.inputContainer}>
         <Image src={user.image} style={styles.image} />
