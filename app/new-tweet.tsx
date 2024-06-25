@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import { View, StyleSheet, Text, Image, TextInput } from 'react-native';
 
 const user = {
@@ -11,9 +12,17 @@ const user = {
 export default function NewTweet() {
   return (
     <View style={styles.container}>
+      <Link href='../' style={{ fontSize: 24 }}>
+        Cancel
+      </Link>
       <View style={styles.inputContainer}>
         <Image src={user.image} style={styles.image} />
-        <Text>Create new tweet</Text>
+        <TextInput
+          placeholder="What's happening?"
+          multiline
+          numberOfLines={5}
+          style={{ flex: 1 }}
+        />
       </View>
     </View>
   );
