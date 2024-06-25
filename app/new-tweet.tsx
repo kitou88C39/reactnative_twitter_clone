@@ -20,7 +20,7 @@ const user = {
 export default function NewTweet() {
   const [text, setText] = useState('');
   const onTweetPress = () => {
-    console.warn('Posting the tweet');
+    console.warn('Posting the tweet:', text);
   };
   return (
     <View style={styles.container}>
@@ -36,7 +36,7 @@ export default function NewTweet() {
         <Image src={user.image} style={styles.image} />
         <TextInput
           value={text}
-          onChangeText={(newValue) => setText(newValue)}
+          onChangeText={setText}
           placeholder="What's happening?"
           multiline
           numberOfLines={5}
