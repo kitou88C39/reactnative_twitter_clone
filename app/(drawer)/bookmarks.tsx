@@ -1,7 +1,11 @@
-import React from 'react';
+import { View, Text } from 'react-native';
 
 const bookmarks = () => {
-  return <div>bookmarks</div>;
+  return (
+    <View>
+      <Text>bookmarks</Text>
+    </View>
+  );
 };
 
 export default bookmarks;
