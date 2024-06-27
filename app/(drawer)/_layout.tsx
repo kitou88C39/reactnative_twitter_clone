@@ -1,5 +1,11 @@
 import { withLayoutContext } from 'expo-router';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+  createDrawerNavigator,
+} from '@react-navigation/drawer';
+import { ActivityIndicator, Text } from 'react-native';
+import { useAuth } from '@/context/AuthContext';
 
 const DrawerNavigator = createDrawerNavigator().Navigator;
 
@@ -9,10 +15,31 @@ export const unstable_settings = {
   initialRouteName: '(tabs)',
 };
 
-export default function Drawerlayout() {
+function CustomDrawerContent(props: any) {
   return (
-    <Drawer>
-      <Drawer.Screen name='(tabs)' options={{ headerShown: false }} />
+    <DrawerContentScrollView {...props}>
+      <Text style={{ alignSelf: 'center', fontSize: 20 }}>Vadim</Text>
+
+      <DrawerItemList {...props} />
+    </DrawerContentScrollView>
+  );
+}
+
+export default function DrawerLayout() {
+  const { authToken } = useAuth();
+
+  if (!authToken) {
+    return <ActivityIndicator />;
+  }
+
+  return (
+    <Drawer drawerContent={(props) => <CustomDrawerContent {...props} />}>
+      <Drawer.Screen
+        name='(tabs)'
+        options={{ headerShown: false, title: 'Home' }}
+      />
+      <Drawer.Screen name='bookmarks' options={{ title: 'Bookmarks' }} />
+      <Drawer.Screen name='twitter-blue' options={{ title: 'Twitter Blue' }} />
     </Drawer>
   );
 }
