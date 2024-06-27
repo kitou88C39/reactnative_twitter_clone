@@ -1,7 +1,6 @@
-import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+import { Link, Tabs, useNavigation } from 'expo-router';
+import { Pressable, useColorScheme, Image } from 'react-native';
 
 import Colors from '@/constants/Colors';
 
@@ -19,7 +18,6 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: useClientOnlyValue(false, true),
       }}
     >
       <Tabs.Screen
