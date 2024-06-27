@@ -1,8 +1,10 @@
+import { withLayoutContext } from 'expo-router';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Stack } from 'expo-router';
 
-const Drawer = createDrawerNavigator();
+const DrawerNavigator = createDrawerNavigator().Navigator;
+
+const Drawer = withLayoutContext(DrawerNavigator);
 
 export default function Drawerlayout() {
-  return <Stack />;
+  return <Drawer />;
 }
