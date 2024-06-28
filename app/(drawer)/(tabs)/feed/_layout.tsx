@@ -1,7 +1,5 @@
-import React from 'react';
+import { Stack } from 'expo-router';
 
-const _layout = () => {
-  return <div>_layout</div>;
-};
-
-export default _layout;
+export default function FeedLayout() {
+  return <Stack screenOptions={{ headerShown: false }} />;
+}
