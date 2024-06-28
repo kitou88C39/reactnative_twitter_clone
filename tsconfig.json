@@ -11,6 +11,6 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "index.ts",
-    "app/tweet/[id].jsx"
+    "app/tweet/[id].tsx"
   ]
 }
